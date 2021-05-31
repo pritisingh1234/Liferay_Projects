@@ -1,0 +1,40 @@
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info text-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"  aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02" [ngbCollapse]="isCollapsed">
+          
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active mr-4">
+              <a class="nav-link" routerLink="/myproject" >Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item  mr-4">
+              <a class="nav-link"  routerLink="/register">Register</a>
+            </li>
+            <li ngbDropdown class="nav-item dropdown  mr-4">
+              <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a ngbDropdownItem class="dropdown-item" href="#">Action</a>
+                <a ngbDropdownItem class="dropdown-item" href="#" >Another action</a>
+                
+                <a ngbDropdownItem class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item  mr-4">
+              <a  class="nav-link" routerLink="/all-user">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0 bg-secondary text-dark" type="submit">Search</button>
+          </form>
+          <i class="fa fa-sign-out" aria-hidden="true">Logout</i>
+        </div>
+      </nav>
+    </body>

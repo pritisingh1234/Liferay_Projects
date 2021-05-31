@@ -1,0 +1,17 @@
+<form>
+    <div>
+ <label  class="label">Username or Email</label>
+     <input required type="texts" name="username"  [(ngModel)]="user.username" placeholder="Enter email"/>
+  
+    </div>
+    <div>
+        <label  class="label">Password</label>
+            <input name="password" required type="texts" [ngModelOptions]="{standalone: true}" [(ngModel)]="user.password" placeholder="Enter email"/>
+          
+           </div>
+  
+           <button class="btn btn-danger" routerLink="/search/{{user.username}}" (click)="update()" style="align-items:right;" data-dismiss="modal">Submit</button>
+<h1>{{user.username}}</h1>
+  
+    </form>  
+  

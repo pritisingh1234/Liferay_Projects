@@ -1,0 +1,43 @@
+<div class="container text-center">
+
+  </div>
+  <div class="container">
+    <div class="row">
+      
+      <div class="search-hero" style="margin-bottom:20px;margin-top:20px;">
+        <input class="form-control " type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder=" Search Here....">
+      </div>
+    
+      <table class="table table-responsive table-hover  table-bordered shadow justify-content-center bg-white text-light "> 
+        <thead>
+        <tr>
+          <th class="shadow  bg-white">UserName</th>
+          <th class="shadow  bg-white">Password</th>
+          <th class="shadow  bg-white">RemoveUser</th>
+          
+        </tr>
+        </thead>
+        <tbody class="shadow-lg  bg-white">
+        <tr  *ngFor="let us of user | filter:searchText">
+          <td >{{us.username}}</td>
+          <td >{{us.password}}</td>
+          <td ><button  class="btn btn-danger" style="align-items:right;" (click)="removeUser(us.username)" data-dismiss="modal">Delete</button></td>
+          <td ><button  class="btn btn-danger" style="align-items:right;" routerLink="/footer/{{us.username}}" data-dismiss="modal">Update</button></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+  </div>
+  
+
+<div class="container mt-4">
+    <h1 class="text-center">ApiCall</h1>
+  
+  
+  
+
+      
+  
+  
+  </div>
+  

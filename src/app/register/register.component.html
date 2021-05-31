@@ -1,0 +1,107 @@
+
+
+ <div style="text-align:center; color:tomato;"> <h1>{{message}}</h1></div>
+     
+ <!-- <form >
+   <label for="username" class="label">Username or Email</label>
+       <input CLASS ="form-control "placeholder="Enter email" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" />
+       <label for="username" class="label">Password</label>
+       <input CLASS ="form-control " placeholder="Enter password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"  />
+
+       <button type="submit" class="btn btn-primary" (click)="registration()">Login</button>
+      </form> -->
+
+<body style="background-image: url(https://cdn.thewirecutter.com/wp-content/uploads/2020/04/laptops-lowres-2x1--1024x512.jpg);background-size: cover;">
+         
+      <form style="width:500px;margin-left:32%;padding-top: 10%;" class="form-group" (ngSubmit)=registration() #login="ngForm">
+   
+       <div style="border:2px solid gray;border-radius:8px; background-color: rgb(0,0,0,0.5);">
+           <h1 style="text-align:center;margin-top: 5%;color:white;">Registration form</h1>
+       <div class="form-label-group"  style="margin-top: 5%;">
+           <label style="font-weight:600;color:white;">UserName</label>
+         <input type="email" id="email" class="form-control" name="email" 
+         [(ngModel)] ="user.username" #email="ngModel"
+         [class.is-invalid]="email.invalid && email.touched" autocomplete="off"
+         placeholder="Email address" required autofocus/>
+         <div class="invalid-feedback" *ngIf="login.submitted && email.invalid">
+           <p *ngIf="email.invalid && email.touched">username is required</p>
+         </div>
+       
+        
+       </div>
+
+       <div class="form-label" style="margin-top: 5%;">
+           <label style="font-weight:600;color:white;">Password</label>
+         <input type="password" [(ngModel)] ="user.password" #password="ngModel"
+         name="password"
+         id="password" class="form-control" placeholder="Password" 
+         [class.is-invalid]="password.invalid && password.touched" 
+         required>
+        
+         <div class="invalid-feedback" *ngIf="login.submitted && password.invalid">
+           <p *ngIf="password.invalid && password.touched">Name is required</p>
+         </div>
+   
+         
+   </div>
+
+       
+       
+           <button  type="submit" class="btn btn-primary mx -2" style="margin-top: 4%;margin-bottom: 4%;width:450px;margin-left: 4.5%;"  >Register</button>
+           
+</div>
+    </form>
+
+    
+
+</body>
+
+
+<app-footer></app-footer>
+
+
+
+    
+<!-- 
+     <div class="container-100 ">
+       <h1 style="text-align:center;font-weight: 400;">Registration</h1>
+   <div class="login-wrap" >
+     <div class="login-html">
+         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+         <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
+         <div class="login-form">
+             <div class="sign-in-htm">
+                 <div class="group">
+           <label for="username" class="label">Username or Email</label>
+                     <input id="user" type="text" class="input" [(ngModel)]="user.username" >
+                 </div>
+                 <div class="group">
+           <label for="password" class="label">Password</label>
+                     <input id="user" type="text" class="input" [(ngModel)]="user.password" >
+                 </div>
+                 <div class="group">
+           <button type="submit" class="btn btn-primary" (click)="registration()">Register</button>
+                 </div>
+                 <div class="hr"></div>
+             </div>
+             <div class="for-pwd-htm">
+                 <div class="group">
+                     <label for="user" class="label">Username or Email</label>
+                     <input id="user" type="text" class="input">
+                 </div>
+                 <div class="group">
+                     <input type="submit" class="button" value="Reset Password">
+                 </div>
+                 <div class="hr"></div>
+             </div>
+         </div>
+     </div>
+ </div>
+ 
+ </div>
+
+
+ <button type="button" class="btn btn-primary">Primary</button>
+  -->
+
+

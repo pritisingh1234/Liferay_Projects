@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="row">
+
+        
+        <table class="table table-hover table w-100 table-bordered shadow justify-content-center bg-white text-dark ">
+            <thead>
+                <tr>
+                <th class="shadow  bg-white">UserName</th>
+                <th class="shadow  bg-white">Password</th>
+                
+                </tr>
+            </thead>
+            <tbody class="shadow-lg  bg-white">
+                <tr>
+                    <td>{{user.username}}</td>
+                    <td>{{user.password}}</td>
+
+                    
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-danger" style="align-items:right;" routerLink="/all-user"
+                            data-dismiss="modal">GoBack</button>
+    </div>
+</div>

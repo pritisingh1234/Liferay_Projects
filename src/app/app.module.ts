@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyprojectComponent } from './myproject/myproject.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AllUserComponent,
     RegisterComponent,
     MyprojectComponent,
+    SampleComponent,
 
 
   ],
